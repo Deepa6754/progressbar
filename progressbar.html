@@ -1,0 +1,44 @@
+<html>
+ <head>
+   <style>
+      #t
+        {
+          border:2px solid red;
+          width:500px;
+          background-color:#ddd;
+        }
+     #t1
+       {
+          width:0%;
+          height:20px;
+          background-color:#00FF00;
+       }
+   </style>
+ </head>
+   <script>
+      function start() 
+       {
+         var obj= 
+         document.getElementById("t1");
+         var width=0;
+         var id=setInterval(pro,40);
+         function pro()
+           {
+             if(width>=100)
+               {
+                 alert("completed 100%");
+                 clearInterval(id);
+               }
+             else
+               {
+                  width++;
+                  obj.style.width=width+'%';
+                }
+           }
+       }
+    </script>
+  <body bgcolor="black">
+        <div id="t"><div id="t1"></div></div><br> 
+        <button onClick="start();" > Start</button>
+  </body>
+</html>
